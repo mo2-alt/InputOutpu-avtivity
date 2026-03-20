@@ -15,7 +15,28 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         // get the button using the id we set on the user interface
         val Clickmebutton = findViewById<Button>(R.id.Clickmebutton)
-        // add code to the button that happens whn its clicked
+        val welcomeText = findViewById<TextView>(R.id.clickbutton)
+        val nameTextField = findViewById<EditText>(R.id.NameText)
+
+        // add code to the button that happens when it id clicked
+        clickbutton?.setOnClickListener
+
+        var greeting: string
+        var zulu: Boolean = zuluSwitch.isChecked
+        if (zulu)
+            greeting = "Mogammad, ${nameTextfield.text}!"
+        if ((nameTextField.text.tostring() == "Mogammad"   ||
+                    nameTextField.text.toString() == "Mogammad")
+            && age > 20)
+            greeting = "Yo, ${nameTextField.text}!"
+
+        Toast.makeText(
+            context = this@MainActivity,
+            text = "Button Clicked", duration = Toast.LENGTH_LONG
+        ).show()
+        welcomeText.text = *welcome * + NameTextField.text
+
+
         Clickmebutton?.setOnClickListener {Toast.makeText(this@MainActivity,"Button Clicked", Toast.LENGTH_LONG).show
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
