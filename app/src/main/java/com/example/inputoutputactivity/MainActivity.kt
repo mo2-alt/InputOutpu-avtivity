@@ -1,8 +1,10 @@
 package com.example.inputoutputactivity
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
@@ -35,6 +37,11 @@ class MainActivity : AppCompatActivity() {
         val welcomeText = findViewById<TextView>(R.id.displayTxt)
         val nameTextField = findViewById<EditText>(R.id.editTextText)
         val zuluSwitch = findViewById<Switch>(R.id.switch1)
+        val spinner = findViewById<Spinner>(R.id.spinner)
+
+        spinner.adapter = ArrayAdapter<MainActivity.Language>(this,
+            android.R.layout.simple_list_item_1, Language.values())
+        
 
         // add code to the button that happens when it id clicked
         Clickmebutton?.setOnClickListener() {
