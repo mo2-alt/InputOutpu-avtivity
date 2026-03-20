@@ -43,17 +43,17 @@ class MainActivity : AppCompatActivity() {
             var zulu: Boolean = zuluSwitch.isChecked
             var age: Int = 20
 
-            Toast.makeText(this@MainActivity, "Button Clicked", Toast.LENGTH_LONG).show()
-
-            if (zulu)
-                greeting = "Mogammad, ${nameTextField.text}!"
-            if ((nameTextField.text.toString() == "Mogammad" ||
-                        nameTextField.text.toString() == "Mogammad")
-                && age > 20
-            )
-                greeting = "Yo, ${nameTextField.text}!"
-
-            welcomeText.text = " welcome " + nameTextField.text
+//            Toast.makeText(this@MainActivity, "Button Clicked", Toast.LENGTH_LONG).show()
+//
+//            if (zulu)
+//                greeting = "Mogammad, ${nameTextField.text}!"
+//            if ((nameTextField.text.toString() == "Mogammad" ||
+//                        nameTextField.text.toString() == "Mogammad")
+//                && age > 20
+//            )
+//                greeting = "Yo, ${nameTextField.text}!"
+//
+//            welcomeText.text = " welcome " + nameTextField.text
         }
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.Main)) { v, insets ->
                 val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
